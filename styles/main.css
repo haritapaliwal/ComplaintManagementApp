@@ -1,0 +1,230 @@
+/* Root variables for color palette */
+:root {
+  --brand-900: #001f4d;
+  --brand-50: #f0f8ff;
+  --background-light: #f8fafc;
+  --border-radius: 1rem;
+  --box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  --max-width: 500px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--background-light);
+  color: var(--brand-900);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--brand-900);
+}
+
+.highlight, .important, .yellow {
+  color: #FFD600; /* This color was removed from root variables, so it's hardcoded */
+  font-weight: bold;
+}
+
+button,
+.btn,
+input[type="submit"] {
+  background: #FFD600; /* This color was removed from root variables, so it's hardcoded */
+  color: #222; /* This color was removed from root variables, so it's hardcoded */
+  border: none;
+  border-radius: 30px;
+  padding: 0.7rem 2rem;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+  background: #FFC400; /* This color was removed from root variables, so it's hardcoded */
+}
+
+nav, .navbar {
+  background: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  color: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+}
+
+nav a, .navbar a {
+  color: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+}
+
+nav a.active, .navbar a.active {
+  color: #FFD600; /* This color was removed from root variables, so it's hardcoded */
+}
+
+/* Layout */
+.header {
+  background: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  color: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+}
+
+.main-content {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Complaint Form */
+.complaint-form-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: var(--max-width);
+  margin: 2rem auto;
+}
+
+.complaint-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.complaint-form label {
+  color: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.complaint-form input,
+.complaint-form textarea {
+  background: var(--background-light);
+  border: 1px solid #dbeafe;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.complaint-form button[type="submit"] {
+  background: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  color: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  width: 100%;
+}
+.complaint-form button[type="submit"]:hover {
+  background: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+  color: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  border: 1px solid var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+}
+
+/* Complaint Table */
+.complaint-table-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin: 2rem auto;
+}
+
+.complaint-table-title {
+  color: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.complaint-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.complaint-table thead {
+  background: var(--brand-900); /* This color was removed from root variables, so it's hardcoded */
+}
+
+.complaint-table th,
+.complaint-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.complaint-table th {
+  color: var(--brand-50); /* This color was removed from root variables, so it's hardcoded */
+  font-weight: 600;
+}
+
+.complaint-table tbody tr:hover {
+  background: var(--background-light);
+}
+
+/* --- Responsive Enhancements --- */
+@media (max-width: 1200px) {
+  .main-content {
+    max-width: 98vw;
+    padding: 1.5rem;
+  }
+  .complaint-form-container, .complaint-table-container {
+    max-width: 98vw;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-content {
+    max-width: 100vw;
+    padding: 1rem;
+  }
+  .complaint-form-container, .complaint-table-container {
+    max-width: 100vw;
+    padding: 1rem;
+  }
+  .complaint-table-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0.5rem;
+  }
+  .main-content {
+    padding: 0.5rem;
+  }
+  .complaint-form-container, .complaint-table-container {
+    padding: 0.5rem;
+  }
+  .complaint-table-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content, .complaint-form-container, .complaint-table-container {
+    padding: 0.5rem;
+    max-width: 100vw;
+  }
+  .complaint-form input, .complaint-form textarea {
+    font-size: 0.95rem;
+  }
+  .complaint-table th, .complaint-table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .complaint-table {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .complaint-table thead, .complaint-table tbody, .complaint-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+} 

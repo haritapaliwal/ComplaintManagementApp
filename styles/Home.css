@@ -1,0 +1,124 @@
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+/* Remove the header bar */
+.home-header-bar {
+  display: none;
+}
+
+.home-box {
+  background: #e9ecef;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(44, 44, 44, 0.10);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-title {
+  color: #292e61;
+  font-size: 2.2rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 500;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.home-desc {
+  display: none;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  margin-top: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-btn, .home-btn-outline {
+  background: #292e61;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 0;
+  font-size: 1.25rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-weight: 500;
+  width: 320px;
+  max-width: 90vw;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(44,44,44,0.08);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  outline: none;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.home-btn:hover, .home-btn-outline:hover {
+  background: #1a1d3a;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+}
+
+.home-btn-outline {
+  background: #292e61;
+  color: #fff;
+  border: none;
+}
+
+/* --- Responsive Enhancements --- */
+@media (max-width: 1200px) {
+  .home-box {
+    max-width: 98vw;
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .home-title {
+    font-size: 1.5rem;
+  }
+  .home-box {
+    padding: 1.5rem 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .home-title {
+    font-size: 1.1rem;
+  }
+  .home-box {
+    padding: 1rem 0.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .home-header-bar {
+    display: none;
+  }
+  .home-box {
+    padding: 1.2rem 0.5rem;
+    width: 98vw;
+    max-width: 100vw;
+  }
+  .home-title {
+    font-size: 1.3rem;
+  }
+  .home-btn, .home-btn-outline {
+    font-size: 1rem;
+    padding: 0.8rem 0;
+    width: 90vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+} 
